@@ -1,0 +1,11 @@
+{
+  "name": "compass-test",
+  "version": "0.0.0",
+  "description": "Node.js and Ruby/Compass/Susy deploy test with ddollar/heroku-buildpack-multi",
+  "main": "server.js",
+  "author": "smagch <smagch@gmail.com>",
+  "dependencies": {
+    "express": "~3.5.0"
+  },
+  "private": true
+}
