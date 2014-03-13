@@ -1,0 +1,17 @@
+// Screen
+// ======
+
+@import "susy";
+@import "breakpoint";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @include container();
+  width: 90%;
+  margin: 0 auto;
+  border: 10px solid #262626;
+}

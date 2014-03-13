@@ -1,0 +1,30 @@
+extends layout
+
+block body
+  h1
+    = 'Example grid system Using '
+    a(href="http://susy.oddbird.net/", target='_blank') Susy
+    = ' And '
+    a(href="http://breakpoint-sass.com/", target='_blank') Breakpoint
+  p
+    = 'Here is a simple grid with susy. For more advanced example, see '
+    a(href="/product") here.
+
+  h2 12 column, 1/4 size gutter
+  .container
+    - for (var i = 1; i <= 12 * 3; i++) {
+      - if (i % 12 == 0) {
+        .tile12.last #{i}
+      - } else {
+        .tile12 #{i}
+      - }
+    - }
+  h2 7 column, 1/4 size gutter
+  .container
+    - for (var i = 1; i <= 7 * 3; i++) {
+      - if (i % 7 == 0) {
+        .tile2.last #{i}
+      - } else {
+        .tile2 #{i}
+      - }
+    - }

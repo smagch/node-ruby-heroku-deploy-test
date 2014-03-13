@@ -3,7 +3,8 @@
 
 @import "susy";
 
+// set default layout
 $susy: (
   columns: 12,
-  gutters: 1/4,
+  gutters: 1 / 4,
 );

@@ -5,7 +5,8 @@
   "main": "server.js",
   "author": "smagch <smagch@gmail.com>",
   "dependencies": {
-    "express": "~3.5.0"
+    "express": "~3.5.0",
+    "jade": "~1.3.0"
   },
   "private": true
 }
