@@ -9,9 +9,58 @@ body {
   padding: 0;
 }
 
+$susy: (
+  columns: 2,
+  gutters: 0,
+);
+
+// Responsive Variables
+$xlarge: 1280px;
+$large: 1024px;
+$medium: 768px;
+
+// 512 = $large / 2
+$large-layout: 2 (512px 0px) split static;
+// 640 = $xlarge / 2
+$xlarge-layout: 2 (640px 0px) split static;
+
 .container {
   @include container();
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  border: 10px solid #262626;
+}
+
+.tile {
+  // default is less then $medium width
+  width: span(2);
+  height: 100px;
+  line-height: 100px;
+  font-size: 40px;
+  margin-top: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background: #e6f3bf;
+  text-align: center;
+
+  @include breakpoint($medium $large) {
+    @include span(1);
+  }
+}
+
+@include susy-breakpoint($large $xlarge, $large-layout) {
+  .container {
+    @include container();
+  }
+  .tile {
+    @include span(1);
+  }
+}
+
+@include susy-breakpoint($xlarge, $xlarge-layout) {
+  .container {
+    @include container();
+  }
+  .tile {
+    @include span(1);
+  }
 }
